@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - RecLora</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">RecLora</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="download.html" class="nav-link">Download</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+                <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <h1>FAQ</h1>
+        <div style="max-width: 800px; margin-top: 2rem;">
+            <div class="accordion-item active">
+                <button class="accordion-header">What is RecLora?</button>
+                <div class="accordion-content">RecLora is a community-driven revival of Rec Room inspired by the 2023 experience.</div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">When will it be available?</button>
+                <div class="accordion-content">Check our roadmap for release dates and milestones.</div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Is it free to play?</button>
+                <div class="accordion-content">Yes, RecLora will be free to play for all community members.</div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2026 RecLora. <a href="https://discord.gg/bJBuP4hwXz" target="_blank">Discord</a></p>
+    </footer>
+    <style>
+        .accordion-item { margin-bottom: 1rem; }
+        .accordion-header { width: 100%; padding: 1rem; background: #2A2A2A; border: 1px solid #333; cursor: pointer; text-align: left; color: white; }
+        .accordion-content { display: none; padding: 1rem; background: #1A1A1A; }
+        .accordion-item.active .accordion-content { display: block; }
+    </style>
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
