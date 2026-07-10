@@ -31,8 +31,19 @@ body {
     align-items: center;
 }
 .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--color-white);
+    text-decoration: none;
+}
+.logo-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    object-fit: contain;
 }
 .nav-menu {
     display: flex;
@@ -139,4 +150,9 @@ body {
 .footer a {
     color: var(--color-accent);
     text-decoration: none;
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
 }
