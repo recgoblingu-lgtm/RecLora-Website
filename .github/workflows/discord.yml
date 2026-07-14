@@ -1,3 +1,9 @@
+# .github/workflows/discord.yml
+#
+# Sends a rich Discord embed notification via webhook on every push to main.
+# Requires: repo secret `DISCORD_WEBHOOK`.
+# Uses the default GITHUB_TOKEN (read-only) for commit stats + avatar lookup.
+
 name: Discord Commit Notifications
 
 on:
@@ -8,62 +14,158 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-      - name: Send Discord Notification
+      # ------------------------------------------------------------------
+      # 1. Get additions/deletions/files-changed for the head commit.
+      #    (The push payload doesn't include line-level stats.)
+      # ------------------------------------------------------------------
+      - name: Gather commit stats
+        id: stats
         env:
-          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          COMMIT_MSG="${{ github.event.head_commit.message }}"
-          COMMIT_URL="${{ github.event.head_commit.url }}"
-          AUTHOR="${{ github.actor }}"
-          BRANCH="${GITHUB_REF##*/}"
-          REPO="${{ github.repository }}"
+          set -euo pipefail
+          RESPONSE=$(curl -sf -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}")
 
-          curl -H "Content-Type: application/json" \
-          -d "{
-            \"embeds\": [{
-              \"title\": \"🚀 New Commit Pushed\",
-              \"description\": \"A new commit was pushed to **$REPO**\",
-              \"color\": 8071167,
-              \"fields\": [
+          ADDITIONS=$(echo "$RESPONSE" | jq -r '.stats.additions // 0')
+          DELETIONS=$(echo "$RESPONSE" | jq -r '.stats.deletions // 0')
+          FILES_CHANGED=$(echo "$RESPONSE" | jq -r '(.files | length) // 0')
+
+          echo "additions=$ADDITIONS" >> "$GITHUB_OUTPUT"
+          echo "deletions=$DELETIONS" >> "$GITHUB_OUTPUT"
+          echo "files_changed=$FILES_CHANGED" >> "$GITHUB_OUTPUT"
+
+      # ------------------------------------------------------------------
+      # 2. Fetch the pusher's GitHub avatar. Falls back to the static
+      #    <username>.png route if the API call fails for any reason.
+      # ------------------------------------------------------------------
+      - name: Fetch pusher avatar
+        id: avatar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          AVATAR_URL=$(curl -sf -H "Authorization: Bearer $GITHUB_TOKEN" \
+            "https://api.github.com/users/${{ github.actor }}" | jq -r '.avatar_url // empty')
+
+          if [ -z "${AVATAR_URL:-}" ]; then
+            AVATAR_URL="https://github.com/${{ github.actor }}.png"
+          fi
+
+          echo "avatar_url=$AVATAR_URL" >> "$GITHUB_OUTPUT"
+
+      # ------------------------------------------------------------------
+      # 3. Build a markdown list of every commit in this push (capped at
+      #    10 to stay under Discord's 1024-char field limit).
+      # ------------------------------------------------------------------
+      - name: Build commit list
+        id: commits
+        env:
+          COMMITS_JSON: ${{ toJson(github.event.commits) }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          LIST=$(echo "$COMMITS_JSON" | jq -r --arg repo "$REPO" '
+            [.[] | "[`" + (.id[0:7]) + "`](https://github.com/" + $repo + "/commit/" + .id + ") " + (.message | split("\n")[0])]
+            | .[0:10]
+            | join("\n")
+          ')
+
+          if [ -z "$LIST" ]; then
+            LIST="No commit details available"
+          fi
+
+          echo "list<<COMMIT_EOF" >> "$GITHUB_OUTPUT"
+          echo "$LIST" >> "$GITHUB_OUTPUT"
+          echo "COMMIT_EOF" >> "$GITHUB_OUTPUT"
+
+          COUNT=$(echo "$COMMITS_JSON" | jq 'length')
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+
+      # ------------------------------------------------------------------
+      # 4. Assemble the embed + link buttons via jq (safe JSON escaping,
+      #    unlike raw string interpolation) and POST to the webhook.
+      # ------------------------------------------------------------------
+      - name: Send Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          COMMIT_LIST: ${{ steps.commits.outputs.list }}
+          COMMIT_COUNT: ${{ steps.commits.outputs.count }}
+          ADDITIONS: ${{ steps.stats.outputs.additions }}
+          DELETIONS: ${{ steps.stats.outputs.deletions }}
+          FILES_CHANGED: ${{ steps.stats.outputs.files_changed }}
+          AVATAR_URL: ${{ steps.avatar.outputs.avatar_url }}
+          ACTOR: ${{ github.actor }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+          SHA: ${{ github.sha }}
+          TIMESTAMP: ${{ github.event.head_commit.timestamp }}
+          RECLORA_LOGO_URL: "https://raw.githubusercontent.com/recgoblingu-lgtm/RecLora-Website/main/IMG_6471-removebg-preview.png"
+        run: |
+          set -euo pipefail
+
+          COMMIT_URL="https://github.com/${REPO}/commit/${SHA}"
+          PROFILE_URL="https://github.com/${ACTOR}"
+          REPO_URL="https://github.com/${REPO}"
+
+          PAYLOAD=$(jq -n \
+            --arg actor "$ACTOR" \
+            --arg avatar "$AVATAR_URL" \
+            --arg profile_url "$PROFILE_URL" \
+            --arg repo "$REPO" \
+            --arg branch "$BRANCH" \
+            --arg commit_list "$COMMIT_LIST" \
+            --arg count "$COMMIT_COUNT" \
+            --arg additions "$ADDITIONS" \
+            --arg deletions "$DELETIONS" \
+            --arg files_changed "$FILES_CHANGED" \
+            --arg timestamp "$TIMESTAMP" \
+            --arg commit_url "$COMMIT_URL" \
+            --arg repo_url "$REPO_URL" \
+            --arg logo "$RECLORA_LOGO_URL" \
+            '{
+              username: "RecLora Bot",
+              avatar_url: $logo,
+              embeds: [
                 {
-                  \"name\": \"👤 Developer\",
-                  \"value\": \"$AUTHOR\",
-                  \"inline\": true
-                },
-                {
-                  \"name\": \"🌿 Branch\",
-                  \"value\": \"$BRANCH\",
-                  \"inline\": true
-                },
-                {
-                  \"name\": \"📁 Repository\",
-                  \"value\": \"$REPO\",
-                  \"inline\": false
-                },
-                {
-                  \"name\": \"📝 Commit Message\",
-                  \"value\": \"$COMMIT_MSG\",
-                  \"inline\": false
+                  title: ("🚀 New push to " + $repo),
+                  color: 10181046,
+                  thumbnail: { url: $logo },
+                  author: {
+                    name: $actor,
+                    url: $profile_url,
+                    icon_url: $avatar
+                  },
+                  fields: [
+                    { name: "📁 Repository", value: $repo, inline: true },
+                    { name: "🌿 Branch", value: $branch, inline: true },
+                    { name: "📦 Commits", value: $count, inline: true },
+                    { name: "📊 Changes", value: ("+" + $additions + " / -" + $deletions + " across " + $files_changed + " file(s)"), inline: false },
+                    { name: "📝 Commit Messages", value: $commit_list, inline: false }
+                  ],
+                  footer: { text: "RecLora Development" },
+                  timestamp: $timestamp
                 }
               ],
-              \"thumbnail\": {
-                \"url\": \"https://raw.githubusercontent.com/recgoblingu-lgtm/RecLora-Website/main/IMG_6471-removebg-preview.png\"
-              },
-              \"footer\": {
-                \"text\": \"RecLora Development\"
-              },
-              \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
-            }],
-            \"components\": [{
-              \"type\": 1,
-              \"components\": [{
-                \"type\": 2,
-                \"style\": 5,
-                \"label\": \"🔗 View Commit\",
-                \"url\": \"$COMMIT_URL\"
-              }]
-            }]
-          }" \
-          "$WEBHOOK"
+              components: [
+                {
+                  type: 1,
+                  components: [
+                    { type: 2, style: 5, label: "🔗 View Commit", url: $commit_url },
+                    { type: 2, style: 5, label: "👤 GitHub Profile", url: $profile_url },
+                    { type: 2, style: 5, label: "📂 Repository", url: $repo_url }
+                  ]
+                }
+              ]
+            }')
+
+          curl -sf -H "Content-Type: application/json" \
+            -X POST \
+            -d "$PAYLOAD" \
+            "${DISCORD_WEBHOOK}?wait=true"
