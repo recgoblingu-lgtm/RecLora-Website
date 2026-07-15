@@ -1,0 +1,103 @@
+<!-- 
+  APPEAL FORM
+  - Uses your existing site CSS (link your stylesheet in <head> below)
+  - Replace WEBHOOK_URL with your actual Discord webhook URL
+  - WARNING: This URL is visible to anyone who views page source.
+    Fine for low-traffic personal use, not fine if you expect abuse/spam.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit an Appeal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="appeal-container">
+    <h1>Submit an Appeal</h1>
+    <p id="status-msg"></p>
+
+    <form id="appeal-form">
+      <label for="username">Discord Username</label>
+      <input type="text" id="username" name="username" required placeholder="e.g. john#1234 or @john">
+
+      <label for="user-id">Discord User ID</label>
+      <input type="text" id="user-id" name="user-id" placeholder="Right-click your profile > Copy User ID">
+
+      <label for="reason">Why were you banned/muted? (as you understand it)</label>
+      <textarea id="reason" name="reason" rows="3" required></textarea>
+
+      <label for="appeal">Why should we lift the ban/mute?</label>
+      <textarea id="appeal" name="appeal" rows="5" required></textarea>
+
+      <label for="extra">Anything else we should know?</label>
+      <textarea id="extra" name="extra" rows="3"></textarea>
+
+      <button type="submit" id="submit-btn">Submit Appeal</button>
+    </form>
+  </main>
+
+  <script>
+    // ⚠️ Replace this with your actual webhook URL
+    const WEBHOOK_URL = "https://canary.discord.com/api/webhooks/1527069516775821507/Mda04bN46k0q5Two7u5ocdugIfQ2hm2AppZllQS8xO08m7A72De9GlwvCr7lRjbODhgw";
+
+    const form = document.getElementById("appeal-form");
+    const statusMsg = document.getElementById("status-msg");
+    const submitBtn = document.getElementById("submit-btn");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const userId = document.getElementById("user-id").value.trim();
+      const reason = document.getElementById("reason").value.trim();
+      const appeal = document.getElementById("appeal").value.trim();
+      const extra = document.getElementById("extra").value.trim();
+
+      const payload = {
+        embeds: [{
+          title: "New Appeal Submitted",
+          color: 0xE67E22,
+          fields: [
+            { name: "Discord Username", value: username || "N/A", inline: true },
+            { name: "User ID", value: userId || "N/A", inline: true },
+            { name: "Ban/Mute Reason (their understanding)", value: reason || "N/A" },
+            { name: "Appeal Reason", value: appeal || "N/A" },
+            { name: "Additional Info", value: extra || "None" }
+          ],
+          timestamp: new Date().toISOString()
+        }]
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+      statusMsg.textContent = "";
+      statusMsg.className = "";
+
+      try {
+        const res = await fetch(WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          statusMsg.textContent = "Appeal submitted successfully. You'll be contacted with a decision.";
+          statusMsg.className = "success";
+          form.reset();
+        } else {
+          throw new Error("Webhook responded with status " + res.status);
+        }
+      } catch (err) {
+        statusMsg.textContent = "Something went wrong submitting your appeal. Try again later.";
+        statusMsg.className = "error";
+        console.error(err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Appeal";
+      }
+    });
+  </script>
+
+</body>
