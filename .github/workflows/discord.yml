@@ -135,6 +135,7 @@ jobs:
               embeds: [
                 {
                   title: ("🚀 New push to " + $repo),
+                  description: ("**" + $actor + "** pushed " + $count + " commit(s) to `" + $branch + "`"),
                   color: 10181046,
                   thumbnail: { url: $logo },
                   author: {
