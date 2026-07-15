@@ -58,6 +58,38 @@ body {
 .nav-link:hover, .nav-link.active {
     color: var(--color-accent);
 }
+
+/* Hamburger toggle button - hidden on desktop */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -151,8 +183,34 @@ body {
     color: var(--color-accent);
     text-decoration: none;
 }
+
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
     .nav-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--color-dark-gray);
+        border-bottom: 1px solid #2A2A2A;
+        padding: 1rem 2rem;
+        gap: 0;
+    }
+    .nav-menu.open {
+        display: flex;
+    }
+    .nav-menu li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #2A2A2A;
+    }
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    .nav-container {
+        position: relative;
     }
 }
