@@ -8,9 +8,18 @@
 </head>
 <body>
 
-            <nav class="navbar">
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">RecLora</div>
+            <div class="nav-logo">
+                <img src="CFA173A2-3EAD-46C4-AFC3-00ACF142A775.png" alt="RecLora Logo" class="logo-img">
+                <span>RecLora</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="download.html" class="nav-link">Download</a></li>
@@ -19,8 +28,8 @@
                 <li><a href="faq.html" class="nav-link">FAQ</a></li>
                 <li><a href="team.html" class="nav-link active">Team</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-               <li><a href="rules.html" class="nav-link">Rules</a></li>
-               <li><a href="fanart.html" class="nav-link">Fan Art</a></li>
+                <li><a href="rules.html" class="nav-link">Rules</a></li>
+                <li><a href="fanart.html" class="nav-link">Fan Art</a></li>
             </ul>
         </div>
     </nav>
@@ -39,5 +48,14 @@
     <footer class="footer">
         <p>&copy; 2026 RecLora. <a href="https://discord.gg/bJBuP4hwXz" target="_blank">Discord</a></p>
     </footer>
+
+    <script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('open');
+        menu.classList.toggle('open');
+    });
+    </script>
 </body>
 </html>
