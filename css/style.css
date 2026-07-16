@@ -221,3 +221,19 @@ body {
         position: relative;
     }
 }
+.logos-section {
+  text-align: center;
+  padding: 48px 16px;
+}
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+}
+.logos-grid img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+}
