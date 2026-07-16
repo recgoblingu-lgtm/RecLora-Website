@@ -6,7 +6,16 @@
     <title>RecLora - Community-Driven Rec Room Revival</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('open');
+        menu.classList.toggle('open');
+    });
+</script>
+
+    <body>
     
 
     <nav class="navbar">
