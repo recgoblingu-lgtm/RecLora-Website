@@ -133,6 +133,13 @@ body {
 .btn-secondary:hover {
     background-color: var(--color-accent);
 }
+.welcome-logo {
+    display: block;
+    max-width: 220px;
+    width: 60%;
+    height: auto;
+    margin: 0 auto 30px;
+}
 .welcome-card {
     text-align: center;
     padding: 3rem;
