@@ -6,10 +6,19 @@
     <title>FAQ - RecLora</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+    <body>
+
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">RecLora</div>
+            <div class="nav-logo">
+                <img src="CFA173A2-3EAD-46C4-AFC3-00ACF142A775.png" alt="RecLora Logo" class="logo-img">
+                <span>RecLora</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="download.html" class="nav-link">Download</a></li>
@@ -23,39 +32,365 @@
             </ul>
         </div>
     </nav>
+
     <main class="container">
-        <h1>FAQ</h1>
-        <div style="max-width: 800px; margin-top: 2rem;">
-            <div class="accordion-item active">
-                <button class="accordion-header">What is RecLora?</button>
-                <div class="accordion-content">RecLora is a community-driven revival of Rec Room inspired by the 2023 experience.</div>
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p class="faq-subtitle">Everything you need to know about RecLora — search below or browse by category.</p>
+        </div>
+
+        <div class="faq-wrap">
+            <input
+                type="text"
+                id="faqSearch"
+                class="faq-search"
+                placeholder="Search questions..."
+                aria-label="Search FAQ"
+            >
+
+            <div class="faq-filters" id="faqFilters">
+                <button class="filter-chip active" data-category="all">All</button>
+                <button class="filter-chip" data-category="general">General</button>
+                <button class="filter-chip" data-category="gameplay">Gameplay</button>
+                <button class="filter-chip" data-category="community">Community</button>
+                <button class="filter-chip" data-category="technical">Technical</button>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header">When will it be available?</button>
-                <div class="accordion-content">Check our roadmap for release dates and milestones.</div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">Is it free to play?</button>
-                <div class="accordion-content">Yes, RecLora will be free to play for all community members.</div>
+
+            <p id="noResults" class="faq-no-results">No matching questions. Try a different search or category.</p>
+
+            <div id="faqList">
+
+                <div class="card accordion-item active" data-category="general">
+                    <button class="accordion-header">
+                        <span class="q-tag">General</span>
+                        What is RecLora?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">RecLora is a community-driven revival of Rec Room, built to recapture the 2023 experience with modern improvements under the hood.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="general">
+                    <button class="accordion-header">
+                        <span class="q-tag">General</span>
+                        When will it be available?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">There's no fixed launch date yet. Check the Roadmap page for current milestones, or follow #announcements in Discord for the latest.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="general">
+                    <button class="accordion-header">
+                        <span class="q-tag">General</span>
+                        Is it free to play?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">Yes. RecLora is free for all community members, with no plans to change that.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="gameplay">
+                    <button class="accordion-header">
+                        <span class="q-tag">Gameplay</span>
+                        Which rooms and features are playable right now?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">Availability changes as development progresses — the Roadmap page tracks exactly what's playable in the current build versus what's planned.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="gameplay">
+                    <button class="accordion-header">
+                        <span class="q-tag">Gameplay</span>
+                        Can I play on Quest or other VR headsets?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">Platform support is being worked out. Check the Download page for the current list of supported devices.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="gameplay">
+                    <button class="accordion-header">
+                        <span class="q-tag">Gameplay</span>
+                        Will progress carry over between updates?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">We aim to preserve player progress across updates whenever possible, but early builds may occasionally require a reset — we'll always announce this in advance.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="community">
+                    <button class="accordion-header">
+                        <span class="q-tag">Community</span>
+                        How do I report a bug?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">Post it in #bug-reports on Discord with as much detail as possible — steps to reproduce, screenshots, and your platform all help.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="community">
+                    <button class="accordion-header">
+                        <span class="q-tag">Community</span>
+                        Can I join the dev team?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">We're always looking for help. Check the Team page for current roles, or ask in Discord — we're hiring across most areas.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="community">
+                    <button class="accordion-header">
+                        <span class="q-tag">Community</span>
+                        What are the community rules?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">Full guidelines live on the Rules page. The short version: be respectful, no harassment, and follow Discord's own terms of service.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="technical">
+                    <button class="accordion-header">
+                        <span class="q-tag">Technical</span>
+                        What are the minimum system requirements?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">Requirements are still being finalized as the client is optimized. The Download page will list confirmed specs once available.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="technical">
+                    <button class="accordion-header">
+                        <span class="q-tag">Technical</span>
+                        The client won't launch or keeps crashing — what do I do?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">Post your log file and system specs in #tech-support on Discord. Most launch issues get resolved there quickly.</div>
+                    </div>
+                </div>
+
+                <div class="card accordion-item" data-category="technical">
+                    <button class="accordion-header">
+                        <span class="q-tag">Technical</span>
+                        Is my data or account information safe?
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">We only collect what's needed to run the service and never sell user data. Details will be posted on a dedicated privacy page as the project matures.</div>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        <div class="card faq-cta">
+            <h3>Still have questions?</h3>
+            <p>Our community and staff are active daily on Discord.</p>
+            <a href="https://discord.gg/bJBuP4hwXz" class="btn btn-primary" target="_blank">Join Discord</a>
+        </div>
     </main>
+
     <footer class="footer">
         <p>&copy; 2026 RecLora. <a href="https://discord.gg/bJBuP4hwXz" target="_blank">Discord</a></p>
     </footer>
+
     <style>
-        .accordion-item { margin-bottom: 1rem; }
-        .accordion-header { width: 100%; padding: 1rem; background: #2A2A2A; border: 1px solid #333; cursor: pointer; text-align: left; color: white; }
-        .accordion-content { display: none; padding: 1rem; background: #1A1A1A; }
-        .accordion-item.active .accordion-content { display: block; }
+        .faq-header {
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+        .faq-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .faq-subtitle {
+            color: #aaa;
+            font-size: 1rem;
+        }
+        .faq-wrap {
+            max-width: 800px;
+        }
+        .faq-search {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            background-color: var(--color-black);
+            border: 1px solid #2A2A2A;
+            color: var(--color-white);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .faq-search:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+        .faq-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .filter-chip {
+            background: transparent;
+            border: 1px solid #2A2A2A;
+            color: #ccc;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+        .filter-chip:hover {
+            border-color: var(--color-accent);
+            color: var(--color-white);
+        }
+        .filter-chip.active {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: white;
+        }
+        .faq-no-results {
+            display: none;
+            color: #aaa;
+            margin-bottom: 1rem;
+        }
+        .accordion-item {
+            padding: 0;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .accordion-header {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            color: var(--color-white);
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+        }
+        .accordion-header::after {
+            content: '+';
+            font-size: 1.3rem;
+            color: var(--color-accent);
+            position: absolute;
+            right: 1.5rem;
+            transition: transform 0.2s ease;
+        }
+        .accordion-item.active .accordion-header::after {
+            transform: rotate(45deg);
+        }
+        .q-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-accent);
+            background: rgba(59, 130, 246, 0.12);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 300px;
+        }
+        .accordion-inner {
+            padding: 0 1.5rem 1.25rem 1.5rem;
+            color: #aaa;
+        }
+        .accordion-item.hidden {
+            display: none;
+        }
+        .faq-cta {
+            max-width: 800px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .faq-cta h3 {
+            margin-bottom: 0.5rem;
+        }
+        .faq-cta p {
+            color: #aaa;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 2rem 1rem; }
+            .faq-header h1 { font-size: 1.8rem; }
+            .accordion-header { padding: 1rem; font-size: 0.95rem; flex-wrap: wrap; }
+            .accordion-header::after { right: 1rem; }
+            .accordion-inner { padding: 0 1rem 1rem 1rem; }
+        }
     </style>
+
     <script>
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
-                item.classList.add('active');
+        const items = document.querySelectorAll('.accordion-item');
+        const searchInput = document.getElementById('faqSearch');
+        const noResults = document.getElementById('noResults');
+        const chips = document.querySelectorAll('.filter-chip');
+        let activeCategory = 'all';
+
+        function applyFilters() {
+            const query = searchInput.value.trim().toLowerCase();
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const question = item.querySelector('.accordion-header').textContent.toLowerCase();
+                const answer = item.querySelector('.accordion-inner').textContent.toLowerCase();
+                const category = item.dataset.category;
+
+                const matchesSearch = !query || question.includes(query) || answer.includes(query);
+                const matchesCategory = activeCategory === 'all' || category === activeCategory;
+                const visible = matchesSearch && matchesCategory;
+
+                item.classList.toggle('hidden', !visible);
+                if (visible) visibleCount++;
+
+                if (query && visible) {
+                    item.classList.add('active');
+                } else if (!query) {
+                    item.classList.remove('active');
+                }
             });
+
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('input', applyFilters);
+
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                activeCategory = chip.dataset.category;
+                applyFilters();
+            });
+        });
+
+        items.forEach(item => {
+            item.querySelector('.accordion-header').addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        const toggle = document.getElementById('navToggle');
+        const menu = document.querySelector('.nav-menu');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('open');
+            menu.classList.toggle('open');
         });
     </script>
 </body>
