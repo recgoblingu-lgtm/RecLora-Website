@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecLora - Staff Terminal</title>
+    <!-- Modern high-fidelity UI fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="staffchat.css">
+</head>
+<body class="staff-body">
+
+    <!-- BACK TO PUBLIC HOME BUTTON -->
+    <a href="index.html" class="back-home-btn">← Public Website</a>
+
+    <div class="terminal-container">
+        
+        <!-- ========================================== -->
+        <!-- SYSTEM STAGE 1: AUTHENTICATION LOGIN LOCK  -->
+        <!-- ========================================== -->
+        <div id="staffGate" class="terminal-card gate-active">
+            <div class="gate-header">
+                <span class="lock-icon">🔒</span>
+                <h2>RecLora Security Gate</h2>
+                <p>Authorized personnel only. Please input terminal authentication key.</p>
+            </div>
+            
+            <div class="gate-form">
+                <input type="password" id="staffPassInput" placeholder="Enter Security Code">
+                <button onclick="checkStaffPassword()" class="btn-login">Authenticate</button>
+            </div>
+            <p id="staffErrorMsg" class="error-msg">❌ Access Denied: Invalid Security Credential</p>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- SYSTEM STAGE 2: PROTECTED STAFF DASHBOARD  -->
+        <!-- ========================================== -->
+        <div id="staffPortal" class="terminal-card portal-hidden">
+            
+            <!-- Dashboard Main Header -->
+            <header class="portal-header">
+                <div class="portal-branding">
+                    <span class="panel-icon">🛠️</span>
+                    <h1>RecLora Staff Operations</h1>
+                </div>
+                <div class="portal-badge">Admin Mode</div>
+            </header>
+
+            <!-- Dual-Column Dashboard Layout -->
+            <div class="portal-grid">
+                
+                <!-- Left Hand Column: Live Interactive Staff Chat -->
+                <section class="panel-box chat-panel">
+                    <div class="panel-title-bar">
+                        <h3>💬 # internal-staff-chat</h3>
+                        <span class="sub-badge">Encrypted Stream</span>
+                    </div>
+                    
+                    <!-- Scrolling Live Feed Room Box -->
+                    <div id="staffChatScroll" class="chat-viewport">
+                        <div class="msg-block">
+                            <div class="msg-meta">
+                                <strong class="user-dev">[Lead Dev] Coach_X</strong>
+                                <span class="msg-time">10:14 AM</span>
+                            </div>
+                            <p class="msg-text">Just finished backing up the client matchmaking database. Ready for the testing phase tonight.</p>
+                        </div>
+
+                        <div class="msg-block">
+                            <div class="msg-meta">
+                                <strong class="user-mod">[Mod] Mer_Luna</strong>
+                                <span class="msg-time">10:32 AM</span>
+                            </div>
+                            <p class="msg-text">Awesome! I'll be online around 6 PM to monitor the room instance loads and clear out any glitched templates.</p>
+                        </div>
+
+                        <div class="msg-block">
+                            <div class="msg-meta">
+                                <strong class="user-system">[Admin] RecLora_Bot</strong>
+                                <span class="msg-time">11:00 AM</span>
+                            </div>
+                            <div class="system-alert">🤖 Automated Notice: Server memory stack cleared successfully. Logs archived.</div>
+                        </div>
+
+                        <!-- Live JavaScript user output hooks into here -->
+                        <div id="liveChatTarget"></div>
+                    </div>
+
+                    <!-- Chat Feed Input Bar Form -->
+                    <div class="chat-input-bar">
+                        <input type="text" id="staffChatInput" placeholder="Send a message to internal team...">
+                        <button onclick="sendStaffMessage()" class="btn-send">Send</button>
+                    </div>
+                </section>
+
+                <!-- Right Hand Column: Diagnostic Monitors and System Controls -->
+                <aside class="panel-box diagnostics-panel">
+                    <div class="panel-title-bar">
+                        <h3>⚡ System Diagnostics</h3>
+                    </div>
+                    
+                    <ul class="diagnostic-list">
+                        <li>
+                            <span class="status-dot online"></span>
+                            <span class="stat-lbl">Master Server API:</span>
+                            <strong class="stat-val state-online">ONLINE</strong>
+                        </li>
+                        <li>
+                            <span class="status-dot online"></span>
+                            <span class="stat-lbl">Matchmaker Node:</span>
+                            <strong class="stat-val state-online">ONLINE</strong>
+                        </li>
+                        <li>
+                            <span class="status-dot secured"></span>
+                            <span class="stat-lbl">Client Database:</span>
+                            <strong class="stat-val state-secured">SECURED</strong>
+                        </li>
+                    </ul>
+
+                    <div class="panel-title-bar" style="margin-top: 24px;">
+                        <h3>📌 Dev Bulletins</h3>
+                    </div>
+                    <div class="bulletin-board">
+                        <p>• <strong>Next Client Patch:</strong> Preparing internal alpha assembly build targeting regression bugs in customized 2023 room instances.</p>
+                        <p style="margin-top: 8px;">• <strong>Staff Notice:</strong> Keep checking internal development channels before approving room template distributions.</p>
+                    </div>
+
+                    <button onclick="logoutStaff()" class="btn-exit">Disconnect Terminal</button>
+                </aside>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CORE INTERACTIVE LOGIC PIPELINE -->
+    <script>
+        function checkStaffPassword() {
+            const userInput = document.getElementById("staffPassInput").value;
+            const gateDiv = document.getElementById("staffGate");
+            const portalDiv = document.getElementById("staffPortal");
+            const errorMsg = document.getElementById("staffErrorMsg");
+
+            if (userInput === "ADMIN") {
+                gateDiv.style.display = "none";
+                portalDiv.style.display = "block";
+                errorMsg.style.display = "none";
+                
+                // Automatically auto-scroll chat down when opening
+                const chatContainer = document.getElementById("staffChatScroll");
+                setTimeout(() => { chatContainer.scrollTop = chatContainer.scrollHeight; }, 50);
+            } else {
+                errorMsg.style.display = "block";
+                document.getElementById("staffPassInput").value = "";
+            }
+        }
+
+        function logoutStaff() {
+            document.getElementById("staffGate").style.display = "block";
+            document.getElementById("staffPortal").style.display = "none";
+            document.getElementById("staffPassInput").value = "";
+        }
+
+        function sendStaffMessage() {
+            const inputElement = document.getElementById("staffChatInput");
+            const chatContainer = document.getElementById("staffChatScroll");
+            const targetDiv = document.getElementById("liveChatTarget");
+            const textContent = inputElement.value.trim();
+
+            if (textContent !== "") {
+                const messageWrapper = document.createElement("div");
+                messageWrapper.className = "msg-block live-msg";
+
+                const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                messageWrapper.innerHTML = `
+                    <div class="msg-meta">
+                        <strong class="user-current">[Admin] You (Staff)</strong>
+                        <span class="msg-time">${currentTime}</span>
+                    </div>
+                    <p class="msg-text">${textContent}</p>
+                `;
+
+                targetDiv.appendChild(messageWrapper);
+                inputElement.value = "";
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+        }
+
+        // Hotkey triggers for ease of access
+        document.getElementById("staffPassInput").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") checkStaffPassword();
+        });
+        document.getElementById("staffChatInput").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") sendStaffMessage();
+        });
+    </script>
+</body>
+</html>
