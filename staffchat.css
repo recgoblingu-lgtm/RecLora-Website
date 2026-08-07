@@ -1,0 +1,393 @@
+/* --- COMPONENT ARCHITECTURE SYSTEM --- */
+:root {
+    --bg-dark: #060609;
+    --bg-card: #0d0d12;
+    --bg-inner: #07070a;
+    --neon-green: #00ff66;
+    --neon-green-fade: rgba(0, 255, 102, 0.04);
+    --border-glow: rgba(0, 255, 102, 0.15);
+    --text-light: #ffffff;
+    --text-gray: #7e8f94;
+    --cyan: #00d9ff;
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Fredoka', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.staff-body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-family);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: radial-gradient(circle at top left, rgba(0, 255, 102, 0.05), transparent 45%);
+}
+
+/* --- BACK BUTTON ELEMENT --- */
+.back-home-btn {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: var(--bg-card);
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.2s ease;
+}
+.back-home-btn:hover {
+    color: var(--text-light);
+    border-color: var(--neon-green);
+}
+
+/* --- TERMINAL SHELL PANELS --- */
+.terminal-container {
+    width: 100%;
+    max-width: 1000px;
+    z-index: 10;
+}
+
+.terminal-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+/* --- GATE MODULE VIEW --- */
+.gate-active {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    text-align: center;
+    border-color: rgba(255,255,255,0.06);
+}
+
+.gate-header .lock-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.gate-header h2 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.gate-header p {
+    color: var(--text-gray);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.gate-form {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gate-form input {
+    background-color: var(--bg-inner);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.gate-form input:focus {
+    border-color: var(--neon-green);
+}
+
+.btn-login {
+    background-color: var(--neon-green);
+    color: #000000;
+    font-family: var(--font-display);
+    font-weight: 700;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 102, 0.4);
+    transform: scale(1.01);
+}
+
+.error-msg {
+    color: #ff4444;
+    font-size: 13px;
+    margin-top: 16px;
+    display: none;
+}
+
+/* --- DASHBOARD WORKSPACE MODULE VIEW --- */
+.portal-hidden {
+    display: none; /* Controlled dynamically via Javascript authentication */
+}
+
+.portal-header {
+    background-color: rgba(255, 255, 255, 0.01);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portal-branding {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.portal-branding h1 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.portal-badge {
+    background-color: var(--neon-green-fade);
+    color: var(--neon-green);
+    border: 1px solid var(--border-glow);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.portal-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 30px;
+}
+
+.panel-box {
+    background-color: var(--bg-inner);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.panel-title-bar h3 {
+    font-family: var(--font-display);
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--neon-green);
+}
+
+.sub-badge {
+    color: var(--text-gray);
+    font-size: 11px;
+}
+
+/* --- CHAT DISPLAY STREAM MODULE --- */
+.chat-viewport {
+    height: 320px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-right: 10px;
+}
+
+.msg-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.msg-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.user-dev { color: #ff4747; }
+.user-mod { color: var(--cyan); }
+.user-system { color: #ffaa00; }
+.user-current { color: var(--neon-green); }
+
+.msg-time {
+    color: var(--text-gray);
+    font-size: 11px;
+}
+
+.msg-text {
+    color: #e2e8f0;
+    font-size: 14px;
+    line-height: 1.45;
+    padding-left: 2px;
+}
+
+.system-alert {
+    font-family: monospace;
+    font-size: 13px;
+    background: rgba(0, 255, 102, 0.03);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 3px solid var(--neon-green);
+    color: var(--neon-green);
+}
+
+.chat-input-bar {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-bar input {
+    flex-grow: 1;
+    background-color: var(--bg-dark);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-light);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.chat-input-bar input:focus {
+    border-color: rgba(0, 255, 102, 0.4);
+}
+
+.btn-send {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    font-family: var(--font-display);
+    padding: 0 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-send:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- TELEMETRY AND DIAGNOSTIC MODULES --- */
+.diagnostic-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.diagnostic-list li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.status-dot.online {
+    background-color: var(--neon-green);
+    box-shadow: 0 0 8px var(--neon-green);
+}
+.status-dot.secured {
+    background-color: var(--cyan);
+    box-shadow: 0 0 8px var(--cyan);
+}
+
+.stat-lbl {
+    color: var(--text-gray);
+    flex-grow: 1;
+}
+
+.state-online { color: var(--neon-green); }
+.state-secured { color: var(--cyan); }
+
+.bulletin-board {
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #cbd5e1;
+    border: 1px solid rgba(255,255,255,0.01);
+}
+
+.btn-exit {
+    margin-top: auto;
+    background: linear-gradient(135deg, #cc3333, #991b1b);
+    color: var(--text-light);
+    font-family: var(--font-display);
+    font-weight: 700;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-exit:hover {
+    transform: translateY(-1px);
+}
+
+/* --- RESPONSIVE MOBILE SCALING MEDIA QUERIES --- */
+@media (max-width: 900px) {
+    .portal-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-exit {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .portal-header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .portal-grid {
+        padding: 16px;
+    }
+}
