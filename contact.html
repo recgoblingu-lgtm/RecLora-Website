@@ -40,20 +40,20 @@
             </div>
             <div class="card">
                 <h2>Send Message</h2>
-                <form class="contact-form" onsubmit="alert('Thank you for your message!'); return false;">
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" required>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Send</button>
                 </form>
             </div>
         </div>
@@ -61,5 +61,60 @@
     <footer class="footer">
         <p>&copy; 2026 RecLora. <a href="https://discord.gg/bJBuP4hwXz" target="_blank">Discord</a></p>
     </footer>
+
+    <script>
+        // 1. Replace this URL with your actual Discord Webhook URL
+        const WEBHOOK_URL = "https://discord.com/api/webhooks/1536057190702514447/-HxbTMl_jZMEmliga985X5cWIbvEhPIk3JR20MTwsVo8Gi8Mxz4VHLbDcymKebAC7yCl";
+
+        document.getElementById("contactForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById("submitBtn");
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Format message neatly using Discord embeds
+            const payload = {
+                username: "Website Contact Form",
+                embeds: [
+                    {
+                        title: "New Contact Form Submission",
+                        color: 5814783, // Hex color in decimal (e.g., #5865F2)
+                        fields: [
+                            { name: "Name", value: name, inline: true },
+                            { name: "Email", value: email, inline: true },
+                            { name: "Message", value: message }
+                        ],
+                        timestamp: new Date().toISOString()
+                    }
+                ]
+            };
+
+            try {
+                const response = await fetch(WEBHOOK_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    alert("Thank you! Your message has been sent.");
+                    document.getElementById("contactForm").reset();
+                } else {
+                    alert("Failed to send message. Please try again later.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred while sending your message.");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send";
+            }
+        });
+    </script>
 </body>
 </html>
