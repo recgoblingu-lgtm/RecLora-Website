@@ -252,5 +252,6 @@ body {
 .autoscale {
       width: 100%; /* Set width */
       height: auto; /* Keep aspect ratio */
+    border-radius: 10px;
     }
 }
