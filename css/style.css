@@ -249,8 +249,8 @@ body {
         padding: 10px 16px;
     }
 
-img {
-      width: 50%; /* Set width */
+.autoscale {
+      width: 100%; /* Set width */
       height: auto; /* Keep aspect ratio */
     }
 }
