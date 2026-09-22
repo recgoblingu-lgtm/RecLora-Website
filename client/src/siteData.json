@@ -1,0 +1,1290 @@
+{
+  "total_pages": 120,
+  "categories": [
+    "Announcement & Articles",
+    "Creator Academy",
+    "Documents & Policies",
+    "Hub",
+    "Profile",
+    "Rooms",
+    "Rooms & Experiences",
+    "Shop & Inventions",
+    "Tools"
+  ],
+  "pages": [
+    {
+      "slug": "home",
+      "path": "/",
+      "title": "RecLora | Home",
+      "category": "Hub",
+      "description": "Welcome to RecLora, the vibrant social universe where you create, play, and connect with friends."
+    },
+    {
+      "slug": "announcements",
+      "path": "/announcements",
+      "title": "Official Announcements",
+      "category": "Hub",
+      "description": "Stay tuned for the latest updates, patch notes, policies, and community highlights from RecLora Studio."
+    },
+    {
+      "slug": "rooms",
+      "path": "/rooms",
+      "title": "Explore Rooms",
+      "category": "Hub",
+      "description": "Browse thousands of community-built rooms, hanging spots, multiplayer arenas, quests, and mini-games."
+    },
+    {
+      "slug": "room-sample",
+      "path": "/rooms/cosmic-lounge",
+      "title": "Cosmic Lounge (Sample Room)",
+      "category": "Rooms",
+      "description": "Our premier featured room template. Fully customizable space with ambient neon lighting, stage, and hangout booths."
+    },
+    {
+      "slug": "profile",
+      "path": "/profile",
+      "title": "Sample Creator Profile (@LoraAdmin)",
+      "category": "Profile",
+      "description": "Your public creator showcase on RecLora. Edit your display name, bio, badges, featured rooms, and portfolio photos directly."
+    },
+    {
+      "slug": "shop",
+      "path": "/shop",
+      "title": "RecLora Shop",
+      "category": "Hub",
+      "description": "Discover custom avatar apparel, inventions, dorm room props, gadgets, and exclusive seasonal items."
+    },
+    {
+      "slug": "creator",
+      "path": "/creator",
+      "title": "Creator Hub",
+      "category": "Hub",
+      "description": "All the tools, documentation, tutorials, and cashout programs you need to succeed as a RecLora builder."
+    },
+    {
+      "slug": "download",
+      "path": "/download",
+      "title": "Download RecLora",
+      "category": "Hub",
+      "description": "Get RecLora free on PC, VR headsets, mobile devices, and consoles with full cross-play support."
+    },
+    {
+      "slug": "events",
+      "path": "/events",
+      "title": "Community Events",
+      "category": "Hub",
+      "description": "Join live DJ sets, building contests, community meetups, and developer Q&A sessions."
+    },
+    {
+      "slug": "editor",
+      "path": "/editor",
+      "title": "Quick Content Editor",
+      "category": "Tools",
+      "description": "Interactive in-browser editor to customize the announcement banner, profile info, and sample room in real-time."
+    },
+    {
+      "slug": "article-3strike-creation-policy",
+      "path": "/creator/p/3strike-creation-policy",
+      "title": "3 strike creation policy",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-3strike-creation-policy-update",
+      "path": "/creator/p/3strike-creation-policy-update",
+      "title": "3 Strike Creation Policy Update",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-CountdownClub",
+      "path": "/creator/p/CountdownClub",
+      "title": "CountdownClub",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-CountdownClub-21",
+      "path": "/creator/p/CountdownClub-21",
+      "title": "Countdownclub 21",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for CountdownClub 21 in RecLora."
+    },
+    {
+      "slug": "article-Documents",
+      "path": "/creator/p/Documents",
+      "title": "Creator Documents",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-Level-Cap-Increase",
+      "path": "/creator/p/Level-Cap-Increase",
+      "title": "Level Cap Increase",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-Level-Cap-Increase-0",
+      "path": "/creator/p/Level-Cap-Increase-0",
+      "title": "Level Cap Increase 0",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for Level Cap Increase 0 in RecLora."
+    },
+    {
+      "slug": "article-Room-Boost-Expansion",
+      "path": "/creator/p/Room-Boost-Expansion",
+      "title": "Room Boosts Expansion",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-Room-Boost-Expansion-1",
+      "path": "/creator/p/Room-Boost-Expansion-1",
+      "title": "Room Boost Expansion 1",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for Room Boost Expansion 1 in RecLora."
+    },
+    {
+      "slug": "article-Room-Boosts",
+      "path": "/creator/p/Room-Boosts",
+      "title": "Room Boosts",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-Room-Boosts-3",
+      "path": "/creator/p/Room-Boosts-3",
+      "title": "Room Boosts 3",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for Room Boosts 3 in RecLora."
+    },
+    {
+      "slug": "article-Roomie-Short-Video-Contest",
+      "path": "/creator/p/Roomie-Short-Video-Contest",
+      "title": "Roomie Short Video Contest",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-Roomie-Short-Video-Contest-6",
+      "path": "/creator/p/Roomie-Short-Video-Contest-6",
+      "title": "Roomie Short Video Contest 6",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for Roomie Short Video Contest 6 in RecLora."
+    },
+    {
+      "slug": "article-U6-bug-fixes",
+      "path": "/creator/p/U6-bug-fixes",
+      "title": "U6 Bug Fixes",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-U6-bug-fixes-5",
+      "path": "/creator/p/U6-bug-fixes-5",
+      "title": "U6 Bug Fixes 5",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for U6 bug fixes 5 in RecLora."
+    },
+    {
+      "slug": "article-Updates-to-paintball",
+      "path": "/creator/p/Updates-to-paintball",
+      "title": "Updates To Paintball",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for Updates to paintball in RecLora."
+    },
+    {
+      "slug": "article-Updates-to-paintball-4",
+      "path": "/creator/p/Updates-to-paintball-4",
+      "title": "Updates To Paintball 4",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for Updates to paintball 4 in RecLora."
+    },
+    {
+      "slug": "article-age-ratings",
+      "path": "/creator/p/age-ratings",
+      "title": "Controlling Room Access with Age Ratings",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-art-contest-7-winners",
+      "path": "/creator/p/art-contest-7-winners",
+      "title": "Art Contest 7 Winners",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-art-contest-7-winners-33",
+      "path": "/creator/p/art-contest-7-winners-33",
+      "title": "Art Contest 7 Winners 33",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for art contest 7 winners 33 in RecLora."
+    },
+    {
+      "slug": "article-bonkys-inferno",
+      "path": "/creator/p/bonkys-inferno",
+      "title": "BonkysInferno",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-cashout",
+      "path": "/creator/p/cashout",
+      "title": "Cash Out",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-class-of-87-reunion",
+      "path": "/creator/p/class-of-87-reunion",
+      "title": "The Class of \u201987 Reunion",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-creativeclubs",
+      "path": "/creator/p/creativeclubs",
+      "title": "Featured Creative Clubs",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-creator-academy",
+      "path": "/creator/p/creator-academy",
+      "title": "Creator Academy",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-creatorprograms",
+      "path": "/creator/p/creatorprograms",
+      "title": "Creator Programs",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-discovery-room-recommendations",
+      "path": "/creator/p/discovery-room-recommendations",
+      "title": "Discovery Room Recommendations",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-discovery-room-recommendations-36",
+      "path": "/creator/p/discovery-room-recommendations-36",
+      "title": "Discovery Room Recommendations 36",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for discovery room recommendations 36 in RecLora."
+    },
+    {
+      "slug": "article-dm-settings",
+      "path": "/creator/p/dm-settings",
+      "title": "New Direct Message Settings",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-earn-rewards",
+      "path": "/creator/p/earn-rewards",
+      "title": "Earn Rewards",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-explore-rooms2",
+      "path": "/creator/p/explore-rooms2",
+      "title": "Explore Rooms 2.0",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-fba-deep-dive",
+      "path": "/creator/p/fba-deep-dive",
+      "title": "FBA Deep Dive",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-fba-deep-dive-34",
+      "path": "/creator/p/fba-deep-dive-34",
+      "title": "Fba Deep Dive 34",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for fba deep dive 34 in RecLora."
+    },
+    {
+      "slug": "article-fba-hub",
+      "path": "/creator/p/fba-hub",
+      "title": "FBA Hub",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-fba-hub-37",
+      "path": "/creator/p/fba-hub-37",
+      "title": "Fba Hub 37",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for fba hub 37 in RecLora."
+    },
+    {
+      "slug": "article-featured",
+      "path": "/creator/p/featured",
+      "title": "Get Featured",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-feeding-frenzy",
+      "path": "/creator/p/feeding-frenzy",
+      "title": "Feeding-Frenzy",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-feeding-frenzy-22",
+      "path": "/creator/p/feeding-frenzy-22",
+      "title": "Feeding Frenzy 22",
+      "category": "Announcement & Articles",
+      "description": "Announcement details and creator guidelines for feeding frenzy 22 in RecLora."
+    },
+    {
+      "slug": "article-hacking-prevention",
+      "path": "/creator/p/hacking-prevention",
+      "title": "Cheating & Hacking Prevention in RecLora",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-introducing-roomie",
+      "path": "/creator/p/introducing-roomie",
+      "title": "Introducing Roomie: Your AI Companion in the Roomiverse",
+      "category": "Announcement & Articles",
+      "description": "This website is a community tribute to RecLora built by Studio 87. If you would like to learn more about what we've been working on, please ..."
+    },
+    {
+      "slug": "article-reunion-class-of-87",
+      "path": "/creator/p/reunion-class-of-87",
+      "title": "RecLora Reunion: The Class of '87 Spectacular",
+      "category": "Announcement & Articles",
+      "description": "Join creators and players for the biggest throwback festival of the year featuring retro dorm cosmetics and nostalgic lounge parties."
+    },
+    {
+      "slug": "article-creator-rewards-q3",
+      "path": "/creator/p/creator-rewards-q3",
+      "title": "RecLora Creator Rewards Program: Q3 Update",
+      "category": "Announcement & Articles",
+      "description": "Learn how high-performing room architects and invention creators earn real payout bonuses and exclusive gold verified badges."
+    },
+    {
+      "slug": "article-mesh-import-guide",
+      "path": "/creator/p/mesh-import-guide",
+      "title": "Custom 3D Mesh Importing in RecLora Studio",
+      "category": "Announcement & Articles",
+      "description": "A detailed walkthrough for bringing high-poly OBJ and FBX assets directly into custom RecLora rooms with LOD optimization."
+    },
+    {
+      "slug": "article-circuits-v2-mastery",
+      "path": "/creator/p/circuits-v2-mastery",
+      "title": "Circuits V2: Advanced Game Logic & Variables",
+      "category": "Announcement & Articles",
+      "description": "Build complex mechanics, scoreboards, and dynamic physics triggers with our visual node-based scripting framework."
+    },
+    {
+      "slug": "article-avatar-expression-update",
+      "path": "/creator/p/avatar-expression-update",
+      "title": "Express Yourself: Next-Gen Avatar Customization",
+      "category": "Announcement & Articles",
+      "description": "Introducing dynamic eye tracking, layered custom jackets, and high-fidelity gold accessories for every RecLora citizen."
+    },
+    {
+      "slug": "article-moderation-transparency-report",
+      "path": "/creator/p/moderation-transparency-report",
+      "title": "Community Safety & Moderation Transparency",
+      "category": "Announcement & Articles",
+      "description": "Our bi-annual review of automated anti-cheat filters, user reports, and community moderation performance across public spaces."
+    },
+    {
+      "slug": "article-dorm-room-showcase",
+      "path": "/creator/p/dorm-room-showcase",
+      "title": "Top 10 Most Innovative Dorm Rooms of the Month",
+      "category": "Announcement & Articles",
+      "description": "Tour the most aesthetically stunning and technologically inventive private rooms crafted entirely with maker pens."
+    },
+    {
+      "slug": "room-cosmic-lounge",
+      "path": "/rooms/cosmic-lounge",
+      "title": "Room: Cosmic Lounge",
+      "category": "Rooms & Experiences",
+      "description": "[Hangout] Neon aesthetic sky lounge with DJ booth and cozy chillout pods. (4,820 active visits, 4.9\u2605 rating)"
+    },
+    {
+      "slug": "room-cyber-tag-2088",
+      "path": "/rooms/cyber-tag-2088",
+      "title": "Room: CyberTag 2088",
+      "category": "Rooms & Experiences",
+      "description": "[Action] High-intensity laser arena with wall-running and gravity elevators. (8,940 active visits, 4.8\u2605 rating)"
+    },
+    {
+      "slug": "room-medieval-quest",
+      "path": "/rooms/medieval-quest",
+      "title": "Room: The Quest for the Golden Chalice",
+      "category": "Rooms & Experiences",
+      "description": "[Quest] Cooperative 4-player dungeon crawler through enchanted ruins. (12,450 active visits, 4.95\u2605 rating)"
+    },
+    {
+      "slug": "room-lofi-cafe-rain",
+      "path": "/rooms/lofi-cafe-rain",
+      "title": "Room: Lo-Fi Midnight Cafe",
+      "category": "Rooms & Experiences",
+      "description": "[Social] A peaceful rain-soaked rooftop cafe playing ambient lo-fi beats. (6,320 active visits, 4.88\u2605 rating)"
+    },
+    {
+      "slug": "room-paintball-spillway",
+      "path": "/rooms/paintball-spillway",
+      "title": "Room: Paintball: Spillway Redux",
+      "category": "Rooms & Experiences",
+      "description": "[PvP] Fast-paced tactical capture-the-flag across industrial dams. (15,200 active visits, 4.7\u2605 rating)"
+    },
+    {
+      "slug": "room-roller-coaster-park",
+      "path": "/rooms/roller-coaster-park",
+      "title": "Room: Starlight Amusement Pier",
+      "category": "Rooms & Experiences",
+      "description": "[Theme Park] Ride thrilling custom roller coasters and win carnival prizes. (7,890 active visits, 4.65\u2605 rating)"
+    },
+    {
+      "slug": "room-escape-room-manor",
+      "path": "/rooms/escape-room-manor",
+      "title": "Room: Mystery at Ravenwood Manor",
+      "category": "Rooms & Experiences",
+      "description": "[Puzzle] Crack cryptic puzzles and unlock hidden doors before midnight. (9,300 active visits, 4.92\u2605 rating)"
+    },
+    {
+      "slug": "room-dodgeball-championship",
+      "path": "/rooms/dodgeball-championship",
+      "title": "Room: RecLora Super Dodgeball",
+      "category": "Rooms & Experiences",
+      "description": "[Sports] Classic arcade sports arena with physics power-ups. (5,400 active visits, 4.6\u2605 rating)"
+    },
+    {
+      "slug": "room-vaporwave-mall",
+      "path": "/rooms/vaporwave-mall",
+      "title": "Room: Mall of 1994",
+      "category": "Rooms & Experiences",
+      "description": "[Hangout] Nostalgic retro mall with working arcades and food court vibes. (4,100 active visits, 4.75\u2605 rating)"
+    },
+    {
+      "slug": "room-kart-racing-gp",
+      "path": "/rooms/kart-racing-gp",
+      "title": "Room: RecLora Kart Grand Prix",
+      "category": "Rooms & Experiences",
+      "description": "[Racing] Drift around corkscrew tracks and fire confetti rockets at opponents. (11,200 active visits, 4.85\u2605 rating)"
+    },
+    {
+      "slug": "room-zen-bamboo-gardens",
+      "path": "/rooms/zen-bamboo-gardens",
+      "title": "Room: Zen Bamboo Sanctuary",
+      "category": "Rooms & Experiences",
+      "description": "[Relaxation] Tranquil koi ponds, tea pavilions, and cherry blossom paths. (3,200 active visits, 4.9\u2605 rating)"
+    },
+    {
+      "slug": "room-horror-hospital-3",
+      "path": "/rooms/horror-hospital-3",
+      "title": "Room: Silent Ward: Asylum",
+      "category": "Rooms & Experiences",
+      "description": "[Horror] Survive terrifying corridors with flashlight battery management. (14,300 active visits, 4.78\u2605 rating)"
+    },
+    {
+      "slug": "room-space-station-odyssey",
+      "path": "/rooms/space-station-odyssey",
+      "title": "Room: Orbital Station Echo",
+      "category": "Rooms & Experiences",
+      "description": "[Sci-Fi] Zero-g airlocks, research laboratories, and spacewalk docks. (5,100 active visits, 4.8\u2605 rating)"
+    },
+    {
+      "slug": "room-pirate-cove-battle",
+      "path": "/rooms/pirate-cove-battle",
+      "title": "Room: Pirate Bay Cannonade",
+      "category": "Rooms & Experiences",
+      "description": "[Adventure] Board galleons, fire broadside cannons, and dig for buried gold. (6,800 active visits, 4.73\u2605 rating)"
+    },
+    {
+      "slug": "room-trivia-night-live",
+      "path": "/rooms/trivia-night-live",
+      "title": "Room: Studio 87 Live Trivia",
+      "category": "Rooms & Experiences",
+      "description": "[Interactive] Automated 50-question trivia game show with buzzer podiums. (2,900 active visits, 4.82\u2605 rating)"
+    },
+    {
+      "slug": "room-winter-cabin-snow",
+      "path": "/rooms/winter-cabin-snow",
+      "title": "Room: Frosted Pine Chalet",
+      "category": "Rooms & Experiences",
+      "description": "[Seasonal] Roast marshmallows by the fireplace while snow gently falls outside. (4,500 active visits, 4.86\u2605 rating)"
+    },
+    {
+      "slug": "room-parkour-sky-islands",
+      "path": "/rooms/parkour-sky-islands",
+      "title": "Room: Skybound Archipelago Parkour",
+      "category": "Rooms & Experiences",
+      "description": "[Platformer] Test your platforming speed across floating marble islands. (8,700 active visits, 4.68\u2605 rating)"
+    },
+    {
+      "slug": "room-cinema-paradiso",
+      "path": "/rooms/cinema-paradiso",
+      "title": "Room: Golden Screen Drive-In",
+      "category": "Rooms & Experiences",
+      "description": "[Media] Watch creator short films and music videos on a giant projection screen. (3,900 active visits, 4.7\u2605 rating)"
+    },
+    {
+      "slug": "room-mech-arena-brawl",
+      "path": "/rooms/mech-arena-brawl",
+      "title": "Room: Titan Core Mecha Arena",
+      "category": "Rooms & Experiences",
+      "description": "[Combat] Pilot customizable robotic suits with rocket boosters. (7,200 active visits, 4.77\u2605 rating)"
+    },
+    {
+      "slug": "room-sunset-beach-resort",
+      "path": "/rooms/sunset-beach-resort",
+      "title": "Room: Solstice Beachfront",
+      "category": "Rooms & Experiences",
+      "description": "[Hangout] Volleyball courts, jet skis, and tropical sunset views. (6,100 active visits, 4.84\u2605 rating)"
+    },
+    {
+      "slug": "room-dungeon-siege-coop",
+      "path": "/rooms/dungeon-siege-coop",
+      "title": "Room: Catacombs of the Undying",
+      "category": "Rooms & Experiences",
+      "description": "[RPG] Level up skills, cast elemental spells, and vanquish goblin hordes. (9,800 active visits, 4.89\u2605 rating)"
+    },
+    {
+      "slug": "room-steampunk-airship",
+      "path": "/rooms/steampunk-airship",
+      "title": "Room: The Leviathan Dirigible",
+      "category": "Rooms & Experiences",
+      "description": "[Exploration] Explore brass engine rooms and observation decks in the clouds. (4,300 active visits, 4.81\u2605 rating)"
+    },
+    {
+      "slug": "room-fashion-runway-show",
+      "path": "/rooms/fashion-runway-show",
+      "title": "Room: RecLora Fashion Week",
+      "category": "Rooms & Experiences",
+      "description": "[Creative] Strut the illuminated runway and vote on community outfits. (3,600 active visits, 4.79\u2605 rating)"
+    },
+    {
+      "slug": "room-laser-tag-subway",
+      "path": "/rooms/laser-tag-subway",
+      "title": "Room: Metro Station Lockdown",
+      "category": "Rooms & Experiences",
+      "description": "[PvP] Close-quarters combat inside an abandoned neon subway station. (8,100 active visits, 4.72\u2605 rating)"
+    },
+    {
+      "slug": "room-glider-canyon-flight",
+      "path": "/rooms/glider-canyon-flight",
+      "title": "Room: Falcon Canyon Gliding",
+      "category": "Rooms & Experiences",
+      "description": "[Flying] Catch thermals and swoop through red-rock canyons on hang-gliders. (5,600 active visits, 4.87\u2605 rating)"
+    },
+    {
+      "slug": "shop-royal-purple-hoodie",
+      "path": "/shop/royal-purple-hoodie",
+      "title": "Shop: Royal Purple Studio Hoodie",
+      "category": "Shop & Inventions",
+      "description": "[Clothing] Signature RecLora oversized fleece hoodie in purple with gold embroidered crest. (Price: 450 Tokens)"
+    },
+    {
+      "slug": "shop-gilded-maker-pen-skin",
+      "path": "/shop/gilded-maker-pen-skin",
+      "title": "Shop: Gilded Champion Maker Pen Skin",
+      "category": "Shop & Inventions",
+      "description": "[Skins] Show off your building prowess with polished 24k gold accents and purple particle trail. (Price: 1,200 Tokens)"
+    },
+    {
+      "slug": "shop-neon-halo-headband",
+      "path": "/shop/neon-halo-headband",
+      "title": "Shop: Astral Purple Halo",
+      "category": "Shop & Inventions",
+      "description": "[Headwear] Floating celestial ring with gentle pulsating gold aura for stylish avatars. (Price: 650 Tokens)"
+    },
+    {
+      "slug": "shop-cyber-shades-gold",
+      "path": "/shop/cyber-shades-gold",
+      "title": "Shop: Gold Trim Cyber Visor",
+      "category": "Shop & Inventions",
+      "description": "[Eyewear] Futuristic heads-up display glasses with reflective polarized gold lens. (Price: 350 Tokens)"
+    },
+    {
+      "slug": "shop-vintage-leather-bomber",
+      "path": "/shop/vintage-leather-bomber",
+      "title": "Shop: Aviator Flight Jacket '87",
+      "category": "Shop & Inventions",
+      "description": "[Clothing] Classic distressed brown leather jacket with shearling collar and custom pins. (Price: 800 Tokens)"
+    },
+    {
+      "slug": "shop-animated-dragon-wings",
+      "path": "/shop/animated-dragon-wings",
+      "title": "Shop: Amethyst Dragon Wings",
+      "category": "Shop & Inventions",
+      "description": "[Backpack] Articulated dragon wings that unfurl and flap gracefully as you sprint or jump. (Price: 1,500 Tokens)"
+    },
+    {
+      "slug": "shop-royal-crown-tiara",
+      "path": "/shop/royal-crown-tiara",
+      "title": "Shop: Sovereign Gold Coronet",
+      "category": "Shop & Inventions",
+      "description": "[Headwear] Opulent ceremonial crown studded with deep violet amethysts and rubies. (Price: 2,000 Tokens)"
+    },
+    {
+      "slug": "shop-soundtrack-boombox",
+      "path": "/shop/soundtrack-boombox",
+      "title": "Shop: Retro Studio Boombox",
+      "category": "Shop & Inventions",
+      "description": "[Props] Portable audio prop with 8 pre-installed RecLora lo-fi and synthwave tracks. (Price: 500 Tokens)"
+    },
+    {
+      "slug": "shop-crystal-blade-sword",
+      "path": "/shop/crystal-blade-sword",
+      "title": "Shop: Starforged Broadsword",
+      "category": "Shop & Inventions",
+      "description": "[Weapon Skin] Prismatic blade that hums with purple energy when swung in quest rooms. (Price: 950 Tokens)"
+    },
+    {
+      "slug": "shop-plushie-roomie-mascot",
+      "path": "/shop/plushie-roomie-mascot",
+      "title": "Shop: Roomie Plush Toy",
+      "category": "Shop & Inventions",
+      "description": "[Dorm Props] Cuddly companion plushie that squeaks with joy when squeezed or tossed. (Price: 250 Tokens)"
+    },
+    {
+      "slug": "shop-floating-drone-companion",
+      "path": "/shop/floating-drone-companion",
+      "title": "Shop: Cyber Orb Pet Drone",
+      "category": "Shop & Inventions",
+      "description": "[Inventions] Autonomous hovering companion drone that follows you and reacts with emojis. (Price: 1,100 Tokens)"
+    },
+    {
+      "slug": "shop-confetti-cannon-party",
+      "path": "/shop/confetti-cannon-party",
+      "title": "Shop: Celebration Confetti Blaster",
+      "category": "Shop & Inventions",
+      "description": "[Gadgets] Blast celebratory purple and gold metallic ribbons into the sky. (Price: 400 Tokens)"
+    },
+    {
+      "slug": "shop-neon-graffiti-spraycan",
+      "path": "/shop/neon-graffiti-spraycan",
+      "title": "Shop: Chroma Spray Can (10 Colors)",
+      "category": "Shop & Inventions",
+      "description": "[Inventions] Interactive marker prop for creating temporary glowing tags on walls. (Price: 300 Tokens)"
+    },
+    {
+      "slug": "shop-deluxe-dorm-furniture-set",
+      "path": "/shop/deluxe-dorm-furniture-set",
+      "title": "Shop: Luxury Penthouse Furniture Pack",
+      "category": "Shop & Inventions",
+      "description": "[Room Packs] 25-piece matching velvet sofa, coffee table, lighting, and marble fireplace collection. (Price: 1,800 Tokens)"
+    },
+    {
+      "slug": "shop-steampunk-pocket-watch",
+      "path": "/shop/steampunk-pocket-watch",
+      "title": "Shop: Clockwork Chronometer",
+      "category": "Shop & Inventions",
+      "description": "[Accessories] Handcrafted brass timepiece with spinning internal gears and chime sounds. (Price: 420 Tokens)"
+    },
+    {
+      "slug": "shop-laser-guitar-instrument",
+      "path": "/shop/laser-guitar-instrument",
+      "title": "Shop: Starlight Keytar Synthesizer",
+      "category": "Shop & Inventions",
+      "description": "[Instruments] Playable 3-octave synthesizer instrument with custom reverb presets. (Price: 900 Tokens)"
+    },
+    {
+      "slug": "shop-glider-gold-edition",
+      "path": "/shop/glider-gold-edition",
+      "title": "Shop: Golden Phoenix Glider",
+      "category": "Shop & Inventions",
+      "description": "[Vehicles] Aerodynamic glider wing with trailing gold sparks and smooth flight handling. (Price: 1,600 Tokens)"
+    },
+    {
+      "slug": "shop-champion-trophy-pedestal",
+      "path": "/shop/champion-trophy-pedestal",
+      "title": "Shop: RecLora Master Creator Trophy",
+      "category": "Shop & Inventions",
+      "description": "[Showcase] Interactive display pedestal that reads and projects your live creator stats. (Price: 2,500 Tokens)"
+    },
+    {
+      "slug": "academy-intro-to-makerpen",
+      "path": "/creator/academy/intro-to-makerpen",
+      "title": "Academy: Maker Pen 101: Basic Shapes & Snapping",
+      "category": "Creator Academy",
+      "description": "Learn the essential geometry tools, snapping increments, and color palettes."
+    },
+    {
+      "slug": "academy-circuits-quickstart",
+      "path": "/creator/academy/circuits-quickstart",
+      "title": "Academy: Circuits V2 Quickstart for Beginners",
+      "category": "Creator Academy",
+      "description": "Wire your very first light switch, button trigger, and door opener."
+    },
+    {
+      "slug": "academy-lighting-and-mood",
+      "path": "/creator/academy/lighting-and-mood",
+      "title": "Academy: Atmospheric Lighting & Post-Processing",
+      "category": "Creator Academy",
+      "description": "Master sun direction, point lights, fog density, and bloom in your environments."
+    },
+    {
+      "slug": "academy-room-optimization-drawcalls",
+      "path": "/creator/academy/room-optimization-drawcalls",
+      "title": "Academy: Room Performance: Optimizing Draw Calls & Ink",
+      "category": "Creator Academy",
+      "description": "Tips to keep your frame rate locked at 90fps across standalone VR and mobile."
+    },
+    {
+      "slug": "academy-monetization-keys-and-currencies",
+      "path": "/creator/academy/monetization-keys-and-currencies",
+      "title": "Academy: In-Room Purchases: Keys, Currencies & Consumables",
+      "category": "Creator Academy",
+      "description": "How to set up custom token stores, VIP room passes, and consumables."
+    },
+    {
+      "slug": "academy-custom-sound-effects",
+      "path": "/creator/academy/custom-sound-effects",
+      "title": "Academy: Audio Design: Ambience, 3D Sound & Reverb Zones",
+      "category": "Creator Academy",
+      "description": "Create immersive audio landscapes with spatial audio and reverb zones."
+    },
+    {
+      "slug": "academy-creating-inventions",
+      "path": "/creator/academy/creating-inventions",
+      "title": "Academy: Packaging & Selling Maker Pen Inventions",
+      "category": "Creator Academy",
+      "description": "How to publish your props to the community store and set royalty pricing."
+    },
+    {
+      "slug": "academy-props-and-physics-tuning",
+      "path": "/creator/academy/props-and-physics-tuning",
+      "title": "Academy: Physics & Collision: Grabbables, Clamps & Hinges",
+      "category": "Creator Academy",
+      "description": "Build mechanical levers, catapults, and drivable carts with physical constraints."
+    },
+    {
+      "slug": "academy-ai-npc-patrols",
+      "path": "/creator/academy/ai-npc-patrols",
+      "title": "Academy: Configuring AI Enemies and NavMesh Navigation",
+      "category": "Creator Academy",
+      "description": "Set up spawn points, behavior trees, and attack telegraphs for combat quests."
+    },
+    {
+      "slug": "academy-animator-gizmo-masterclass",
+      "path": "/creator/academy/animator-gizmo-masterclass",
+      "title": "Academy: The Animation Gizmo: Keyframing Motion",
+      "category": "Creator Academy",
+      "description": "Create moving platforms, rotating windmills, and cinematic cutscene cameras."
+    },
+    {
+      "slug": "academy-multiplayer-replication",
+      "path": "/creator/academy/multiplayer-replication",
+      "title": "Academy: Networking & Player State Replication",
+      "category": "Creator Academy",
+      "description": "Ensure game state, scores, and inventory stay in sync for every player in the room."
+    },
+    {
+      "slug": "academy-creator-branding-guide",
+      "path": "/creator/academy/creator-branding-guide",
+      "title": "Academy: Building Your Creator Brand & Following",
+      "category": "Creator Academy",
+      "description": "Design striking room thumbnails, engaging titles, and community Discord links."
+    },
+    {
+      "slug": "doc-code-of-conduct",
+      "path": "/creator/docs/code-of-conduct",
+      "title": "Policy: RecLora Code of Conduct & Community Guidelines",
+      "category": "Documents & Policies",
+      "description": "Our core community principles for respecting players, fostering creativity, and anti-harassment."
+    },
+    {
+      "slug": "doc-creator-monetization-policy",
+      "path": "/creator/docs/creator-monetization-policy",
+      "title": "Policy: Creator Monetization & Cashout Eligibility Policy",
+      "category": "Documents & Policies",
+      "description": "Requirements for token cashouts, tax documentation, and anti-fraud verification."
+    },
+    {
+      "slug": "doc-content-rating-standards",
+      "path": "/creator/docs/content-rating-standards",
+      "title": "Policy: Room Content Rating & Age Suitability Standards",
+      "category": "Documents & Policies",
+      "description": "Guidelines for tagging rooms with appropriate maturity ratings and content warnings."
+    },
+    {
+      "slug": "doc-intellectual-property-policy",
+      "path": "/creator/docs/intellectual-property-policy",
+      "title": "Policy: Intellectual Property & DMCA Notice Guidelines",
+      "category": "Documents & Policies",
+      "description": "Protecting original creations and responding to trademark or copyright concerns."
+    },
+    {
+      "slug": "doc-privacy-policy",
+      "path": "/creator/docs/privacy-policy",
+      "title": "Policy: RecLora Privacy Policy & Data Protections",
+      "category": "Documents & Policies",
+      "description": "How we safeguard personal information and ensure transparent telemetry control."
+    },
+    {
+      "slug": "doc-terms-of-service",
+      "path": "/creator/docs/terms-of-service",
+      "title": "Policy: RecLora Terms of Service",
+      "category": "Documents & Policies",
+      "description": "The general agreement governing platform access, virtual goods, and licensing."
+    },
+    {
+      "slug": "doc-creator-badge-verification",
+      "path": "/creator/docs/creator-badge-verification",
+      "title": "Policy: Creator Verification & Golden Maker Pen Program",
+      "category": "Documents & Policies",
+      "description": "Criteria for receiving the official golden creator crest and platform spotlight."
+    },
+    {
+      "slug": "doc-security-and-fair-play",
+      "path": "/creator/docs/security-and-fair-play",
+      "title": "Policy: Security, Fair Play & Anti-Cheat Architecture",
+      "category": "Documents & Policies",
+      "description": "How RecLora deters unauthorized memory modification, exploits, and griefing."
+    }
+  ],
+  "sample_rooms": [
+    [
+      "cosmic-lounge",
+      "Cosmic Lounge",
+      "Hangout",
+      4820,
+      4.9,
+      "Neon aesthetic sky lounge with DJ booth and cozy chillout pods."
+    ],
+    [
+      "cyber-tag-2088",
+      "CyberTag 2088",
+      "Action",
+      8940,
+      4.8,
+      "High-intensity laser arena with wall-running and gravity elevators."
+    ],
+    [
+      "medieval-quest",
+      "The Quest for the Golden Chalice",
+      "Quest",
+      12450,
+      4.95,
+      "Cooperative 4-player dungeon crawler through enchanted ruins."
+    ],
+    [
+      "lofi-cafe-rain",
+      "Lo-Fi Midnight Cafe",
+      "Social",
+      6320,
+      4.88,
+      "A peaceful rain-soaked rooftop cafe playing ambient lo-fi beats."
+    ],
+    [
+      "paintball-spillway",
+      "Paintball: Spillway Redux",
+      "PvP",
+      15200,
+      4.7,
+      "Fast-paced tactical capture-the-flag across industrial dams."
+    ],
+    [
+      "roller-coaster-park",
+      "Starlight Amusement Pier",
+      "Theme Park",
+      7890,
+      4.65,
+      "Ride thrilling custom roller coasters and win carnival prizes."
+    ],
+    [
+      "escape-room-manor",
+      "Mystery at Ravenwood Manor",
+      "Puzzle",
+      9300,
+      4.92,
+      "Crack cryptic puzzles and unlock hidden doors before midnight."
+    ],
+    [
+      "dodgeball-championship",
+      "RecLora Super Dodgeball",
+      "Sports",
+      5400,
+      4.6,
+      "Classic arcade sports arena with physics power-ups."
+    ],
+    [
+      "vaporwave-mall",
+      "Mall of 1994",
+      "Hangout",
+      4100,
+      4.75,
+      "Nostalgic retro mall with working arcades and food court vibes."
+    ],
+    [
+      "kart-racing-gp",
+      "RecLora Kart Grand Prix",
+      "Racing",
+      11200,
+      4.85,
+      "Drift around corkscrew tracks and fire confetti rockets at opponents."
+    ],
+    [
+      "zen-bamboo-gardens",
+      "Zen Bamboo Sanctuary",
+      "Relaxation",
+      3200,
+      4.9,
+      "Tranquil koi ponds, tea pavilions, and cherry blossom paths."
+    ],
+    [
+      "horror-hospital-3",
+      "Silent Ward: Asylum",
+      "Horror",
+      14300,
+      4.78,
+      "Survive terrifying corridors with flashlight battery management."
+    ],
+    [
+      "space-station-odyssey",
+      "Orbital Station Echo",
+      "Sci-Fi",
+      5100,
+      4.8,
+      "Zero-g airlocks, research laboratories, and spacewalk docks."
+    ],
+    [
+      "pirate-cove-battle",
+      "Pirate Bay Cannonade",
+      "Adventure",
+      6800,
+      4.73,
+      "Board galleons, fire broadside cannons, and dig for buried gold."
+    ],
+    [
+      "trivia-night-live",
+      "Studio 87 Live Trivia",
+      "Interactive",
+      2900,
+      4.82,
+      "Automated 50-question trivia game show with buzzer podiums."
+    ],
+    [
+      "winter-cabin-snow",
+      "Frosted Pine Chalet",
+      "Seasonal",
+      4500,
+      4.86,
+      "Roast marshmallows by the fireplace while snow gently falls outside."
+    ],
+    [
+      "parkour-sky-islands",
+      "Skybound Archipelago Parkour",
+      "Platformer",
+      8700,
+      4.68,
+      "Test your platforming speed across floating marble islands."
+    ],
+    [
+      "cinema-paradiso",
+      "Golden Screen Drive-In",
+      "Media",
+      3900,
+      4.7,
+      "Watch creator short films and music videos on a giant projection screen."
+    ],
+    [
+      "mech-arena-brawl",
+      "Titan Core Mecha Arena",
+      "Combat",
+      7200,
+      4.77,
+      "Pilot customizable robotic suits with rocket boosters."
+    ],
+    [
+      "sunset-beach-resort",
+      "Solstice Beachfront",
+      "Hangout",
+      6100,
+      4.84,
+      "Volleyball courts, jet skis, and tropical sunset views."
+    ],
+    [
+      "dungeon-siege-coop",
+      "Catacombs of the Undying",
+      "RPG",
+      9800,
+      4.89,
+      "Level up skills, cast elemental spells, and vanquish goblin hordes."
+    ],
+    [
+      "steampunk-airship",
+      "The Leviathan Dirigible",
+      "Exploration",
+      4300,
+      4.81,
+      "Explore brass engine rooms and observation decks in the clouds."
+    ],
+    [
+      "fashion-runway-show",
+      "RecLora Fashion Week",
+      "Creative",
+      3600,
+      4.79,
+      "Strut the illuminated runway and vote on community outfits."
+    ],
+    [
+      "laser-tag-subway",
+      "Metro Station Lockdown",
+      "PvP",
+      8100,
+      4.72,
+      "Close-quarters combat inside an abandoned neon subway station."
+    ],
+    [
+      "glider-canyon-flight",
+      "Falcon Canyon Gliding",
+      "Flying",
+      5600,
+      4.87,
+      "Catch thermals and swoop through red-rock canyons on hang-gliders."
+    ]
+  ],
+  "sample_items": [
+    [
+      "royal-purple-hoodie",
+      "Royal Purple Studio Hoodie",
+      "Clothing",
+      450,
+      "Signature RecLora oversized fleece hoodie in purple with gold embroidered crest."
+    ],
+    [
+      "gilded-maker-pen-skin",
+      "Gilded Champion Maker Pen Skin",
+      "Skins",
+      1200,
+      "Show off your building prowess with polished 24k gold accents and purple particle trail."
+    ],
+    [
+      "neon-halo-headband",
+      "Astral Purple Halo",
+      "Headwear",
+      650,
+      "Floating celestial ring with gentle pulsating gold aura for stylish avatars."
+    ],
+    [
+      "cyber-shades-gold",
+      "Gold Trim Cyber Visor",
+      "Eyewear",
+      350,
+      "Futuristic heads-up display glasses with reflective polarized gold lens."
+    ],
+    [
+      "vintage-leather-bomber",
+      "Aviator Flight Jacket '87",
+      "Clothing",
+      800,
+      "Classic distressed brown leather jacket with shearling collar and custom pins."
+    ],
+    [
+      "animated-dragon-wings",
+      "Amethyst Dragon Wings",
+      "Backpack",
+      1500,
+      "Articulated dragon wings that unfurl and flap gracefully as you sprint or jump."
+    ],
+    [
+      "royal-crown-tiara",
+      "Sovereign Gold Coronet",
+      "Headwear",
+      2000,
+      "Opulent ceremonial crown studded with deep violet amethysts and rubies."
+    ],
+    [
+      "soundtrack-boombox",
+      "Retro Studio Boombox",
+      "Props",
+      500,
+      "Portable audio prop with 8 pre-installed RecLora lo-fi and synthwave tracks."
+    ],
+    [
+      "crystal-blade-sword",
+      "Starforged Broadsword",
+      "Weapon Skin",
+      950,
+      "Prismatic blade that hums with purple energy when swung in quest rooms."
+    ],
+    [
+      "plushie-roomie-mascot",
+      "Roomie Plush Toy",
+      "Dorm Props",
+      250,
+      "Cuddly companion plushie that squeaks with joy when squeezed or tossed."
+    ],
+    [
+      "floating-drone-companion",
+      "Cyber Orb Pet Drone",
+      "Inventions",
+      1100,
+      "Autonomous hovering companion drone that follows you and reacts with emojis."
+    ],
+    [
+      "confetti-cannon-party",
+      "Celebration Confetti Blaster",
+      "Gadgets",
+      400,
+      "Blast celebratory purple and gold metallic ribbons into the sky."
+    ],
+    [
+      "neon-graffiti-spraycan",
+      "Chroma Spray Can (10 Colors)",
+      "Inventions",
+      300,
+      "Interactive marker prop for creating temporary glowing tags on walls."
+    ],
+    [
+      "deluxe-dorm-furniture-set",
+      "Luxury Penthouse Furniture Pack",
+      "Room Packs",
+      1800,
+      "25-piece matching velvet sofa, coffee table, lighting, and marble fireplace collection."
+    ],
+    [
+      "steampunk-pocket-watch",
+      "Clockwork Chronometer",
+      "Accessories",
+      420,
+      "Handcrafted brass timepiece with spinning internal gears and chime sounds."
+    ],
+    [
+      "laser-guitar-instrument",
+      "Starlight Keytar Synthesizer",
+      "Instruments",
+      900,
+      "Playable 3-octave synthesizer instrument with custom reverb presets."
+    ],
+    [
+      "glider-gold-edition",
+      "Golden Phoenix Glider",
+      "Vehicles",
+      1600,
+      "Aerodynamic glider wing with trailing gold sparks and smooth flight handling."
+    ],
+    [
+      "champion-trophy-pedestal",
+      "RecLora Master Creator Trophy",
+      "Showcase",
+      2500,
+      "Interactive display pedestal that reads and projects your live creator stats."
+    ]
+  ],
+  "academy_guides": [
+    [
+      "intro-to-makerpen",
+      "Maker Pen 101: Basic Shapes & Snapping",
+      "Learn the essential geometry tools, snapping increments, and color palettes."
+    ],
+    [
+      "circuits-quickstart",
+      "Circuits V2 Quickstart for Beginners",
+      "Wire your very first light switch, button trigger, and door opener."
+    ],
+    [
+      "lighting-and-mood",
+      "Atmospheric Lighting & Post-Processing",
+      "Master sun direction, point lights, fog density, and bloom in your environments."
+    ],
+    [
+      "room-optimization-drawcalls",
+      "Room Performance: Optimizing Draw Calls & Ink",
+      "Tips to keep your frame rate locked at 90fps across standalone VR and mobile."
+    ],
+    [
+      "monetization-keys-and-currencies",
+      "In-Room Purchases: Keys, Currencies & Consumables",
+      "How to set up custom token stores, VIP room passes, and consumables."
+    ],
+    [
+      "custom-sound-effects",
+      "Audio Design: Ambience, 3D Sound & Reverb Zones",
+      "Create immersive audio landscapes with spatial audio and reverb zones."
+    ],
+    [
+      "creating-inventions",
+      "Packaging & Selling Maker Pen Inventions",
+      "How to publish your props to the community store and set royalty pricing."
+    ],
+    [
+      "props-and-physics-tuning",
+      "Physics & Collision: Grabbables, Clamps & Hinges",
+      "Build mechanical levers, catapults, and drivable carts with physical constraints."
+    ],
+    [
+      "ai-npc-patrols",
+      "Configuring AI Enemies and NavMesh Navigation",
+      "Set up spawn points, behavior trees, and attack telegraphs for combat quests."
+    ],
+    [
+      "animator-gizmo-masterclass",
+      "The Animation Gizmo: Keyframing Motion",
+      "Create moving platforms, rotating windmills, and cinematic cutscene cameras."
+    ],
+    [
+      "multiplayer-replication",
+      "Networking & Player State Replication",
+      "Ensure game state, scores, and inventory stay in sync for every player in the room."
+    ],
+    [
+      "creator-branding-guide",
+      "Building Your Creator Brand & Following",
+      "Design striking room thumbnails, engaging titles, and community Discord links."
+    ]
+  ],
+  "docs_pages": [
+    [
+      "code-of-conduct",
+      "RecLora Code of Conduct & Community Guidelines",
+      "Our core community principles for respecting players, fostering creativity, and anti-harassment."
+    ],
+    [
+      "creator-monetization-policy",
+      "Creator Monetization & Cashout Eligibility Policy",
+      "Requirements for token cashouts, tax documentation, and anti-fraud verification."
+    ],
+    [
+      "content-rating-standards",
+      "Room Content Rating & Age Suitability Standards",
+      "Guidelines for tagging rooms with appropriate maturity ratings and content warnings."
+    ],
+    [
+      "intellectual-property-policy",
+      "Intellectual Property & DMCA Notice Guidelines",
+      "Protecting original creations and responding to trademark or copyright concerns."
+    ],
+    [
+      "privacy-policy",
+      "RecLora Privacy Policy & Data Protections",
+      "How we safeguard personal information and ensure transparent telemetry control."
+    ],
+    [
+      "terms-of-service",
+      "RecLora Terms of Service",
+      "The general agreement governing platform access, virtual goods, and licensing."
+    ],
+    [
+      "creator-badge-verification",
+      "Creator Verification & Golden Maker Pen Program",
+      "Criteria for receiving the official golden creator crest and platform spotlight."
+    ],
+    [
+      "security-and-fair-play",
+      "Security, Fair Play & Anti-Cheat Architecture",
+      "How RecLora deters unauthorized memory modification, exploits, and griefing."
+    ]
+  ]
+}
