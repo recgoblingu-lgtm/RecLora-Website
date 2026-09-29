@@ -77,13 +77,18 @@
     <p><a href="#">Discord</a> • <a href="#">GitHub</a></p>
   </footer>
   <!-- JS (matches your CSS behavior) -->
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const menu = document.getElementById('navMenu');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active'); // use YOUR CSS trigger
-      menu.classList.toggle('active');   // use YOUR CSS trigger
-    });
-  </script>
+<script>
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navMenu');
+
+  toggle.addEventListener('click', () => {
+    // force toggle visibility directly
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  });
+</script>
 </body>
 </html>
