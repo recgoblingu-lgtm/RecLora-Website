@@ -6,33 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RecLora Shoutouts</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- TEMP FIX STYLES (only needed if your CSS doesn't already handle mobile menu) -->
+  <style>
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background: #1C1C1C;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+    }
+    .nav-menu.open {
+      display: flex;
+    }
+    .nav-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="IMG_7056.png" alt="RecLora Logo" class="logo-img">
-                <span>RecLora</span>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="IMG_7056.png" alt="RecLora Logo" class="logo-img">
+        <span>RecLora</span>
+      </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
     <span></span>
     <span></span>
     <span></span>
-</button>
-
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="download.html" class="nav-link">Download</a></li>
-                <li><a href="news.html" class="nav-link">News</a></li>
-                <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                <li><a href="team.html" class="nav-link">Team</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="rules.html" class="nav-link">Rules</a></li>
-                <li><a href="fanart.html" class="nav-link">Fan Art</a></li>
-            </ul>
-        </div>
-    </nav>
+  </button>
+  <!-- ✅ FIXED: added id="navMenu" -->
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html" class="nav-link active">Home</a></li>
+    <li><a href="download.html" class="nav-link">Download</a></li>
+    <li><a href="news.html" class="nav-link">News</a></li>
+    <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+    <li><a href="team.html" class="nav-link">Team</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+    <li><a href="rules.html" class="nav-link">Rules</a></li>
+    <li><a href="fanart.html" class="nav-link">Fan Art</a></li>
+  </ul>
+</div>
+  </nav>
   <!-- MAIN -->
   <div class="container">
 <!-- PAGE HEADER -->
@@ -45,21 +72,18 @@
 <div class="features-section">
   <h2>Featured Creators</h2>
   <div class="features-grid">
-    <!-- SHOUTOUT CARD -->
     <div class="card feature-card">
       <img src="assets/user1.png" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
       <h3>Creator Name</h3>
       <p>Overall helps reclora thrive!</p>
       <a href="#" class="btn btn-secondary">Visit</a>
     </div>
-    <!-- SHOUTOUT CARD -->
     <div class="card feature-card">
       <img src="assets/user2.png" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
       <h3>Community Name</h3>
       <p>Another placeholder for a server, group, or project.</p>
       <a href="#" class="btn btn-secondary">Check Out</a>
     </div>
-    <!-- SHOUTOUT CARD -->
     <div class="card feature-card">
       <img src="IMG_8298.jpeg" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
       <h3>Friend / Dev</h3>
