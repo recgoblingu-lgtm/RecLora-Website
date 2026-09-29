@@ -14,13 +14,13 @@
     <img src="IMG_7056.png" alt="RecLora Logo" class="logo-img">
     <span>RecLora</span>
   </div>
-  <!-- Hamburger (uses your CSS) -->
+  <!-- Hamburger -->
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
     <span></span>
     <span></span>
     <span></span>
   </button>
-  <!-- ✅ ONLY REAL FIX: added id -->
+  <!-- IMPORTANT: id added -->
   <ul class="nav-menu" id="navMenu">
     <li><a href="index.html" class="nav-link active">Home</a></li>
     <li><a href="download.html" class="nav-link">Download</a></li>
@@ -76,19 +76,14 @@
     <p>© 2026 RecLora. Built by Crimson.</p>
     <p><a href="#">Discord</a> • <a href="#">GitHub</a></p>
   </footer>
-  <!-- JS (matches your CSS behavior) -->
-<script>
-  const toggle = document.getElementById('navToggle');
-  const menu = document.getElementById('navMenu');
-
-  toggle.addEventListener('click', () => {
-    // force toggle visibility directly
-    if (menu.style.display === 'flex') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'flex';
-    }
-  });
-</script>
+  <!-- ✅ CORRECT SCRIPT (matches your CSS) -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
