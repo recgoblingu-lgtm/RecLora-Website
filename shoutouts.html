@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RecLora Shoutouts</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="RecLora Logo" class="logo-img">
+        RecLora
+      </a>
+  <button class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="models.html" class="nav-link">Models</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="shoutout.html" class="nav-link active">Shoutouts</a></li>
+  </ul>
+</div>
+  </nav>
+  <!-- MAIN -->
+  <div class="container">
+<!-- PAGE HEADER -->
+<div class="card welcome-card">
+  <img src="assets/shoutout-banner.png" alt="Shoutout Banner" class="welcome-logo">
+  <h1>Shoutouts</h1>
+  <p>People, creators, and communities that support RecLora.</p>
+</div>
+<!-- SHOUTOUT LIST -->
+<div class="features-section">
+  <h2>Featured Creators</h2>
+  <div class="features-grid">
+    <!-- SHOUTOUT CARD -->
+    <div class="card feature-card">
+      <img src="assets/user1.png" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
+      <h3>Creator Name</h3>
+      <p>Short description of what they do or why they’re awesome.</p>
+      <a href="#" class="btn btn-secondary">Visit</a>
+    </div>
+    <!-- SHOUTOUT CARD -->
+    <div class="card feature-card">
+      <img src="assets/user2.png" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
+      <h3>Community Name</h3>
+      <p>Another placeholder for a server, group, or project.</p>
+      <a href="#" class="btn btn-secondary">Check Out</a>
+    </div>
+    <!-- SHOUTOUT CARD -->
+    <div class="card feature-card">
+      <img src="assets/user3.png" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
+      <h3>Friend / Dev</h3>
+      <p>Someone who helped build or inspired RecLora.</p>
+      <a href="#" class="btn btn-secondary">Profile</a>
+    </div>
+  </div>
+</div>
+<!-- EXTRA SECTION -->
+<div class="card">
+  <h2 style="margin-bottom:10px;">Want to be featured?</h2>
+  <p style="color:#aaa; margin-bottom:15px;">
+    If you’ve contributed, supported, or created something cool, you can be added here.
+  </p>
+  <a href="contact.html" class="btn btn-primary">Contact</a>
+</div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 RecLora. Built by Crimson.</p>
+    <p><a href="#">Discord</a> • <a href="#">GitHub</a></p>
+  </footer>
+  <!-- MOBILE NAV SCRIPT -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
