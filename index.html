@@ -5,10 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecLora - Community-Driven Rec Room Revival</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* HERO BANNER */
+        .hero-banner {
+            width: 100%;
+            height: 260px;
+            background: 
+                linear-gradient(to bottom, rgba(20,20,20,0.2), rgba(20,20,20,0.95)),
+                url("assets/IMG_8306.jpeg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            text-align: center;
+            color: white;
+        }
+
+        .hero-overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-overlay p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+    </style>
 </head>
 
-    <body>
-   
+<body>
 
     <nav class="navbar">
         <div class="nav-container">
@@ -16,11 +44,12 @@
                 <img src="IMG_7056.png" alt="RecLora Logo" class="logo-img">
                 <span>RecLora</span>
             </div>
+
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
@@ -35,6 +64,15 @@
             </ul>
         </div>
     </nav>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <div class="hero-overlay">
+            <h1>RecLora</h1>
+            <p>Community-Driven Rec Room Revival</p>
+        </div>
+    </section>
+
     <main class="container">
         <section class="welcome-section">
             <div class="card welcome-card">
@@ -47,6 +85,7 @@
                 </div>
             </div>
         </section>
+
         <section class="features-section">
             <h2>Why RecLora?</h2>
             <div class="features-grid">
@@ -73,17 +112,20 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <p>&copy; 2026 RecLora. <a href="https://discord.gg/bJBuP4hwXz" target="_blank">Discord</a></p>
     </footer>
 
     <script>
-    const toggle = document.getElementById('navToggle');
-    const menu = document.querySelector('.nav-menu');
-    toggle.addEventListener('click', () => {
-        toggle.classList.toggle('open');
-        menu.classList.toggle('open');
-    });
+        const toggle = document.getElementById('navToggle');
+        const menu = document.querySelector('.nav-menu');
+
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('open');
+            menu.classList.toggle('open');
+        });
     </script>
+
 </body>
 </html>
