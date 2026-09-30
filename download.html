@@ -5,11 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download - RecLora</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* HERO BANNER */
+        .hero-banner {
+            width: 100%;
+            height: 260px;
+            background: 
+                linear-gradient(to bottom, rgba(20,20,20,0.2), rgba(20,20,20,0.95)),
+                url("assets/IMG_8306.jpeg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            text-align: center;
+            color: white;
+        }
+
+        .hero-overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* DOWNLOAD GRID */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .download-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .device-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .device-title {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .coming-soon {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
+
 <body>
+
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">RecLora</div>
+            <div class="nav-logo">
+                <img src="IMG_7056.png" alt="RecLora Logo" class="logo-img">
+                <span>RecLora</span>
+            </div>
+
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="download.html" class="nav-link active">Download</a></li>
@@ -23,20 +83,62 @@
             </ul>
         </div>
     </nav>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <div class="hero-overlay">
+            <h1>Download</h1>
+        </div>
+    </section>
+
     <main class="container">
         <h1>Download RecLora</h1>
         <p style="color: #aaa; margin-bottom: 2rem;">Coming Soon on all platforms</p>
-        <div class="features-grid">
-            <div class="card"><h3>🖥️ Windows</h3><p>Coming Soon</p></div>
-            <div class="card"><h3>🍎 macOS</h3><p>Coming Soon</p></div>
-            <div class="card"><h3>🐧 Linux</h3><p>Coming Soon</p></div>
-            <div class="card"><h3>📱 Mobile</h3><p>Coming Soon</p></div>
-            <div class="card"><h3>🥽 Quest/VR</h3><p>Coming Soon</p></div>
-            <div class="card"><h3>🤪 Other Devices (PS/XBox)</h3><p>Possible to come out but rare.</p></p></div>
+
+        <div class="download-grid">
+
+            <div class="card download-card">
+                <img src="assets/placeholders/windows.png" class="device-logo" alt="Windows">
+                <div class="device-title">Windows</div>
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+
+            <div class="card download-card">
+                <img src="assets/placeholders/macos.png" class="device-logo" alt="macOS">
+                <div class="device-title">macOS</div>
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+
+            <div class="card download-card">
+                <img src="assets/placeholders/linux.png" class="device-logo" alt="Linux">
+                <div class="device-title">Linux</div>
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+
+            <div class="card download-card">
+                <img src="assets/placeholders/mobile.png" class="device-logo" alt="Mobile">
+                <div class="device-title">Mobile</div>
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+
+            <div class="card download-card">
+                <img src="assets/placeholders/vr.png" class="device-logo" alt="VR">
+                <div class="device-title">Quest / VR</div>
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+
+            <div class="card download-card">
+                <img src="assets/placeholders/console.png" class="device-logo" alt="Console">
+                <div class="device-title">PS / Xbox</div>
+                <div class="coming-soon">Possible but rare</div>
+            </div>
+
         </div>
     </main>
+
     <footer class="footer">
         <p>&copy; 2026 RecLora. <a href="https://discord.gg/bJBuP4hwXz" target="_blank">Discord</a></p>
     </footer>
+
 </body>
 </html>
